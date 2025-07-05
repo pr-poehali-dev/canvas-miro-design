@@ -13,7 +13,12 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 219 100% 61.6%; /* #4285F4 */
+    --primary-miro: 219 100% 61.6%; /* #4285F4 */
+    --secondary-miro: 219 100% 71.6%; /* #1A73E8 */
+    --dark-miro: 0 0% 10.2%; /* #1A1A1A */
+    --light-miro: 0 0% 97%; /* #F5F5F5 */
+    --canvas-bg: 0 0% 98%; /* #FAFAFA */
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -97,5 +102,27 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family:
+      "Inter",
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  .canvas-container {
+    background: radial-gradient(circle at 1px 1px, #e5e7eb 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  .tool-active {
+    @apply bg-primary text-white;
+  }
+
+  .canvas-element {
+    @apply transition-all duration-200 cursor-move;
+  }
+
+  .canvas-element:hover {
+    @apply shadow-lg;
   }
 }
